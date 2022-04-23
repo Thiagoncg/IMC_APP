@@ -8,7 +8,7 @@ using System.Globalization;
 public class ImcCalculator : MonoBehaviour
 {
     //PRIVATE VARIABLES
-    [SerializeField]    private float _weight, _height, _imcResult;
+    [SerializeField] private float _weight, _height, _imcResult;
 
     //UI VARIABLES
     [SerializeField] private InputField inputWeight, inputHeight;
@@ -19,7 +19,7 @@ public class ImcCalculator : MonoBehaviour
         _weight = float.Parse(inputWeight.text);
         _height = float.Parse(inputHeight.text);
 
-        _imcResult = ( _weight / (_height * _height));
+        _imcResult = (_weight / (_height * _height) );
         Debug.Log("IMC Result: " + _imcResult.ToString("F"));
 
         IMCVerification(); 
