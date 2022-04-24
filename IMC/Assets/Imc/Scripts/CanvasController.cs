@@ -8,6 +8,7 @@ public class CanvasController : MonoBehaviour
     [SerializeField] private GameObject CanvasInfoCore, CanvasResult;
     [SerializeField] private Text TextWeightDisplay, TextHeightDisplay;
     [SerializeField] private InputField InputWeight, InputHeight;
+    [SerializeField] private Slider sliderWeight, sliderHeight;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,10 +30,12 @@ public class CanvasController : MonoBehaviour
 
     public void DisplayWeightAtualization()
     {
-        TextWeightDisplay.text = InputWeight.text + " Kg";
+        TextWeightDisplay.text = sliderWeight.value.ToString();
+        // TextWeightDisplay.text = InputWeight.text + " Kg";
     }
     public void DisplayHeightAtualization()
     {
-        TextHeightDisplay.text = InputHeight.text + " m";
+        TextHeightDisplay.text = sliderHeight.value.ToString("F");
+        // TextHeightDisplay.text = InputHeight.text + " m";
     }
 }
