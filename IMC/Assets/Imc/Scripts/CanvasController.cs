@@ -2,18 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CanvasController : MonoBehaviour
 {
     [SerializeField] private GameObject CanvasInfoCore, CanvasResult;
     [SerializeField] private Text TextWeightDisplay, TextHeightDisplay;
-    [SerializeField] private InputField InputWeight, InputHeight;
     [SerializeField] private Slider sliderWeight, sliderHeight;
     // Start is called before the first frame update
     void Start()
     {
         CanvasInfoCore.SetActive(true);
-        CanvasResult.SetActive(false);        
+        CanvasResult.SetActive(false); 
+
+        Debug.Log("Seu nome : " + PlayerPrefs.GetString("Name"));   
+
+        Debug.Log("Seu Sexo : " + PlayerPrefs.GetString("Gender"));    
     }
 
     public void BtnNextResult()
@@ -31,11 +35,15 @@ public class CanvasController : MonoBehaviour
     public void DisplayWeightAtualization()
     {
         TextWeightDisplay.text = sliderWeight.value.ToString();
-        // TextWeightDisplay.text = InputWeight.text + " Kg";
     }
     public void DisplayHeightAtualization()
     {
         TextHeightDisplay.text = sliderHeight.value.ToString("F");
-        // TextHeightDisplay.text = InputHeight.text + " m";
+    }
+    public void ResetSettings()
+    {
+        PlayerPrefs.SetString("Gender", "");
+        PlayerPrefs.SetString("Name", "");
+        SceneManager.LoadScene("Login");
     }
 }
