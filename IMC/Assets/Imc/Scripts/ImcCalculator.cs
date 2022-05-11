@@ -81,7 +81,7 @@ public class ImcCalculator : MonoBehaviour
         else if ((_imcResult > 25) && (_imcResult < 30))
         {
             
-            textImcDescription.text = "Sobre o Peso \n Você está acima do peso! \n Procure se alimentar melhor e praticar exercícios físicos";
+            textImcDescription.text = "Sobre Peso \n Você está acima do peso! \n Procure se alimentar melhor e praticar exercícios físicos";
             Debug.Log("Sobre o Peso");
 
             character.GetComponent<Image>().sprite = characterNull[2];
