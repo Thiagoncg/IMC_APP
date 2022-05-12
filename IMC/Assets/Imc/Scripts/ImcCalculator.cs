@@ -54,6 +54,8 @@ public class ImcCalculator : MonoBehaviour
         _imcResult = (_weight / (_height * _height) );
         Debug.Log("IMC Result: " + _imcResult.ToString("F"));
 
+        Debug.Log("O valor de imc é: " + _imcResult);
+
         IMCVerification(); 
     }
 

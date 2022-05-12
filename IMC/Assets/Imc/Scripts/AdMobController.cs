@@ -25,8 +25,8 @@ public class AdMobController : MonoBehaviour
     {//Banner na parte inferior aparece todo o tempo
         // esta usando o mesmo que o do Android, atualizar case crie para ios
         #if UNITY_ANDROID
-            string adUnitId = "ca-app-pub-3940256099942544/6300978111";//ID TESTE
-            //string adUnitId = "ca-app-pub-5382594268641960/9028876810";//ID REAL
+            //string adUnitId = "ca-app-pub-3940256099942544/6300978111";//ID TESTE
+            string adUnitId = "ca-app-pub-5382594268641960/9028876810";//ID REAL
         #elif UNITY_IPHONE
             string adUnitId = "ca-app-pub-5382594268641960/9028876810"; 
         #else
@@ -46,8 +46,8 @@ public class AdMobController : MonoBehaviour
     private void RequestInterstitial()
     {
         #if UNITY_ANDROID
-            string adUnitId = "ca-app-pub-3940256099942544/1033173712";//ID TESTE
-            //string adUnitId = "ca-app-pub-5382594268641960/8127864276";//ID REAL
+            //string adUnitId = "ca-app-pub-3940256099942544/1033173712";//ID TESTE
+            string adUnitId = "ca-app-pub-5382594268641960/8127864276";//ID REAL
         #elif UNITY_IPHONE
             string adUnitId = "ca-app-pub-3940256099942544/4411468910";
         #else
