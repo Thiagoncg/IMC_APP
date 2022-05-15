@@ -9,10 +9,13 @@ public class AdMobController : MonoBehaviour
     //PRIVATE VARIABLES
     private BannerView bannerView;
     private InterstitialAd interstitial;
+
+    [SerializeField] private GameObject myBanner;
+    [SerializeField] private GameObject myIntertitial;
     
 
     public void Start()
-    {
+    {  
         // Initialize the Google Mobile Ads SDK.
         MobileAds.Initialize(initStatus => { });
          this.RequestBanner();
@@ -34,7 +37,7 @@ public class AdMobController : MonoBehaviour
         #endif
 
         // Create a 320x50 banner at the top of the screen.
-        this.bannerView = new BannerView(adUnitId, AdSize.Banner, AdPosition.Bottom);
+        this.bannerView = new BannerView(adUnitId, AdSize.Leaderboard, AdPosition.Bottom);
 
         // Create an empty ad request.
         AdRequest request = new AdRequest.Builder().Build();
@@ -70,5 +73,16 @@ public class AdMobController : MonoBehaviour
         {
             this.interstitial.Show();
         }
+        ShowMyInterstitial();
+    }
+
+    private void ShowMyBanner()
+    {
+        myBanner.SetActive(true);
+    }
+
+    private void ShowMyInterstitial()
+    {
+        myIntertitial.SetActive(true);
     }
 }
