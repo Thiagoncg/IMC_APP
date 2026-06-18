@@ -31,7 +31,7 @@ public class AdMobController : MonoBehaviour
             //string adUnitId = "ca-app-pub-3940256099942544/6300978111";//ID TESTE
             string adUnitId = "ca-app-pub-5382594268641960/9028876810";//ID REAL
         #elif UNITY_IPHONE
-            string adUnitId = "ca-app-pub-5382594268641960/9028876810"; 
+            string adUnitId = "COLOQUE_SEU_ID_DE_BANNER_IOS_AQUI"; // ID REAL DO BANNER IOS
         #else
             string adUnitId = "unexpected_platform";
         #endif
@@ -52,7 +52,7 @@ public class AdMobController : MonoBehaviour
             //string adUnitId = "ca-app-pub-3940256099942544/1033173712";//ID TESTE
             string adUnitId = "ca-app-pub-5382594268641960/8127864276";//ID REAL
         #elif UNITY_IPHONE
-            string adUnitId = "ca-app-pub-3940256099942544/4411468910";
+            string adUnitId = "COLOQUE_SEU_ID_DE_INTERSTITIAL_IOS_AQUI"; // ID REAL DO INTERSTITIAL IOS
         #else
             string adUnitId = "unexpected_platform";
         #endif
